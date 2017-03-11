@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="#afefe3"
+    android:layout_alignParentBottom="true">
+
+    <LinearLayout
+        android:id="@+id/btm_tab1"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/myucheIB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/whuxy6"
+            android:background="#00000000"
+            android:clickable="false"
+            android:contentDescription="@null"
+            />
+        <TextView
+            android:id="@+id/myucheTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预测"
+            android:textColor="#11c8a7"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btm_tab2"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/mcdIB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/whu_xy1"
+            android:background="#00000000"
+            android:clickable="false"
+            android:contentDescription="@null"
+            />
+        <TextView
+            android:id="@+id/mcdTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充电"
+            android:textColor="#646565"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btm_tab3"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/mfdIB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/whu_xy1"
+            android:background="#00000000"
+            android:clickable="false"
+            android:contentDescription="@null"
+            />
+        <TextView
+            android:id="@+id/mfdTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="放电"
+            android:textColor="#646565"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btm_tab4"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/msettingIB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/whu_xy1"
+            android:background="#00000000"
+            android:clickable="false"
+            android:contentDescription="@null"
+            />
+        <TextView
+            android:id="@+id/msettingTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:textColor="#646565"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

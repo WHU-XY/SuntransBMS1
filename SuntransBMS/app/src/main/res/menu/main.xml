@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <span style="white-space:pre">	</span>
+    <span style="white-space:pre">	</span>android:id="@+id/add_item"
+    <span style="white-space:pre">	</span>android:title="Add"/>
+    <span style="white-space:pre">	</span>
+    <span style="white-space:pre">	</span>android:id="@+id/remove_item"
+    <span style="white-space:pre">	</span>android:title="Remove"/>
+</menu>

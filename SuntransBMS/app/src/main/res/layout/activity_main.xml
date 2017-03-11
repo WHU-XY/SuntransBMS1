@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a20133.suntransbms.MainActivity">
+
+    <Subtrans.slidingmenu.view.SlidingMenu
+        android:id="@+id/id_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <include layout="@layout/left_menu"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <include layout="@layout/top"/>
+                <FrameLayout
+                    android:id="@+id/id_Flcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#ff11c8a7"
+                    >
+                </FrameLayout>
+                <include layout="@layout/bottom"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </Subtrans.slidingmenu.view.SlidingMenu>
+</RelativeLayout>

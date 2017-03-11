@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="#ffafefe3"
+    android:layout_alignParentBottom="true">
+
+    <LinearLayout
+        android:id="@+id/id_mTabforecast"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/id_mImgforecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/whuxy1"
+            android:background="#ff000000"
+            android:clickable="false"
+            android:contentDescription="@null"
+            />
+        <TextView
+            android:id="@+id/id_mTvforcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预测"
+            android:textColor="#646565"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/id_mTabcharge"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/id_mImgcharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/whuxy1"
+            android:background="#00000000"
+            android:clickable="false"
+            android:contentDescription="@null"
+            />
+        <TextView
+            android:id="@+id/id_mTvcharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充电"
+            android:textColor="#646565"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/id_mTabdischarge"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/id_mImgdischarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/whuxy1"
+            android:background="#00000000"
+            android:clickable="false"
+            android:contentDescription="@null"
+            />
+        <TextView
+            android:id="@+id/id_mTvdischarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="放电"
+            android:textColor="#646565"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/id_mTabsetting"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/id_mImgsetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/whuxy1"
+            android:background="#00000000"
+            android:clickable="false"
+            android:contentDescription="@null"
+            />
+        <TextView
+            android:id="@+id/id_mTvsetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:textColor="#646565"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
