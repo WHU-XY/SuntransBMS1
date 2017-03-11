@@ -29,7 +29,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:background="#ff11c8a7"
+                    android:background="#ffeaf9f0"
                     >
                 </FrameLayout>
                 <include layout="@layout/bottom"/>

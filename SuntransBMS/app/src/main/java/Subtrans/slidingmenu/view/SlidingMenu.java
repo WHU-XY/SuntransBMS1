@@ -28,6 +28,7 @@ public class SlidingMenu extends HorizontalScrollView {
     private boolean isOpen;
    /*
    * 未使用自定义属性时*/
+
     public SlidingMenu(Context context, AttributeSet attrs) {
         super(context, attrs);
 

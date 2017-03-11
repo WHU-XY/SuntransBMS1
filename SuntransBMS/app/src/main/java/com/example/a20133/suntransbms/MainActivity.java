@@ -61,15 +61,16 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         initEvent();
 
         setSelect(0);
-        mContext = MainActivity.this;
-        btn_show = (Button) findViewById(R.id.id_mTvtopBtn);
-        btn_show.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initPopWindow(v);
-            }
-        });
-        mLeftMenu = (SlidingMenu) findViewById(R.id.id_menu);
+//        mContext = MainActivity.this;
+//        btn_show = (Button) findViewById(R.id.id_mTvtopBtn);
+//       btn_show.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                initPopWindow(v);
+//            }
+//        });
+//        mLeftMenu = (SlidingMenu) findViewById(R.id.id_menu);
+
 
 
     }
@@ -80,6 +81,13 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         mTabcharge.setOnClickListener(this);
         mTabdischarge.setOnClickListener(this);
         mTabsetting.setOnClickListener(this);
+
+        btn_show.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                initPopWindow(v);
+            }
+        });
 
     }
 
@@ -100,7 +108,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         mTvdischarge = (TextView)findViewById(R.id.id_mTvdischarge);
         mTvsetting = (TextView)findViewById(R.id.id_mTvsetting);
 
+        mContext = MainActivity.this;
+        btn_show = (Button) findViewById(R.id.id_mTvtopBtn);
 
+        mLeftMenu = (SlidingMenu) findViewById(R.id.id_menu);
 
     }
 
