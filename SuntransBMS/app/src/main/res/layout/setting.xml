@@ -2,12 +2,212 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Yes"
-        android:textSize="40sp"
-        android:layout_gravity="center"/>
+    android:gravity="center"
+    android:background="#ffeaf9f0">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:id="@+id/id_Leftmenu_LL"
+            android:layout_marginTop="20dp"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_setting_ImgV11"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/elecicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_setting_ImgV11"
+                    android:text="nominalCapac..."
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_setting_ImgV12"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/voltageicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_setting_ImgV12"
+                    android:text="nominalOutpu..."
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_setting_ImgV13"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/voltageicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_setting_ImgV13"
+                    android:text="cutoffVoltage"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_setting_ImgV14"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/elecicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_setting_ImgV14"
+                    android:text="当前电池序号"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_setting_ImgV15"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/elecicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_setting_ImgV15"
+                    android:text="工作状态"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_setting_ImgV16"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/elecicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_setting_ImgV16"
+                    android:text="维护"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="#ffeaf9f0"
+                android:gravity="center_horizontal">
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="#ffffffff"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="编辑"
+                    android:textColor="#afefe3"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
 
 </LinearLayout>
+
+

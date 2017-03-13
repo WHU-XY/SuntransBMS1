@@ -3,13 +3,14 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="60dp"
     android:gravity="center_vertical"
-    android:background="#ff7bdfc2">
+    android:background="#ffafefe3">
 
     <ImageButton
         android:onClick="toggleMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:background="@drawable/menu"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:background="@drawable/reference"
+        android:layout_marginLeft="20dp"
         />
 
     <Button
@@ -26,10 +27,10 @@
         />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:background="@drawable/update"
-
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:background="@drawable/reference"
+        android:layout_marginRight="20dp"
         />
 
 </LinearLayout>

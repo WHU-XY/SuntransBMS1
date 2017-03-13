@@ -2,12 +2,908 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Yes,I do."
-        android:textSize="40sp"
-        android:layout_gravity="center"/>
+    android:gravity="center"
+    android:background="#ffeaf9f0">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:id="@+id/id_Leftmenu_LL"
+            android:layout_marginTop="20dp"
+            >
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="#ffeaf9f0"
+                android:gravity="bottom">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电源检测"
+                    android:layout_marginLeft="20dp"
+                    />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <ImageView
+                    android:id="@+id/id_charge_check_ImgV11"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/voltageicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_check_ImgV11"
+                    android:text="chargePowerVoltage"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_check_ImgV12"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/currenticon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_check_ImgV12"
+                    android:text="chargeAlternatingCurrent"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/id_charge_check_ImgV13"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/powericon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/id_charge_check_ImgV13"
+                    android:text="chargeInputPower"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_check_ImgV14"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/powerrateicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_check_ImgV14"
+                    android:text="sourcePowerFactor"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_check_ImgV15"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/elecicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_check_ImgV15"
+                    android:text="chargePowerConsumption"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/id_charge_check_ImgV16"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/voltageicon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/id_charge_check_ImgV16"
+                    android:text="chargeBatterySideVoltage"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_check_ImgV17"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/currenticon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_check_ImgV17"
+                    android:text="chargeBatterySideCurrent"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_check_ImgV18"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/elecicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_check_ImgV18"
+                    android:text="电池组状态"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="#ffeaf9f0"
+                android:gravity="bottom">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电池#1"
+                    android:layout_marginLeft="20dp"
+                    />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV11"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/operation"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/id_charge_TV11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV11"
+                    android:text="chargeOperation"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:text="stop"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/id_charge_stop_Btn11"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/id_charge_Start_Btn11"
+                    android:layout_toLeftOf="@id/id_charge_stop_Btn11"
+                    android:text="start"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    />
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV12"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/voltageicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV12"
+                    android:text="电压"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/id_charge_ImgV13"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/currenticon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/id_charge_ImgV13"
+                    android:text="电流"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV14"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/powericon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV14"
+                    android:text="充入电量"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV15"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/elecicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV15"
+                    android:text="状态"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="#ffeaf9f0"
+                android:gravity="bottom">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电池#1"
+                    android:layout_marginLeft="20dp"
+                    />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV21"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/operation"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/id_charge_TV21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV21"
+                    android:text="chargeOperation"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:text="stop"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/id_charge_stop_Btn12"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/id_charge_Start_Btn12"
+                    android:layout_toLeftOf="@id/id_charge_stop_Btn12"
+                    android:text="start"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    />
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV22"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/voltageicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV22"
+                    android:text="电压"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/id_charge_ImgV23"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/currenticon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/id_charge_ImgV23"
+                    android:text="电流"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV24"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/powericon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV24"
+                    android:text="充入电量"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV25"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/elecicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV25"
+                    android:text="状态"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="#ffeaf9f0"
+                android:gravity="bottom">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电池#3"
+                    android:layout_marginLeft="20dp"
+                    />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV31"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/operation"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/id_charge_TV31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV31"
+                    android:text="chargeOperation"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:text="stop"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/id_charge_stop_Btn13"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/id_charge_Start_Btn13"
+                    android:layout_toLeftOf="@id/id_charge_stop_Btn13"
+                    android:text="start"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    />
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV32"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/voltageicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV32"
+                    android:text="电压"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/id_charge_ImgV33"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/currenticon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/id_charge_ImgV33"
+                    android:text="电流"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV34"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/powericon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV34"
+                    android:text="充入电量"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV35"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/elecicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV35"
+                    android:text="状态"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="#ffeaf9f0"
+                android:gravity="bottom">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电池#4"
+                    android:layout_marginLeft="20dp"
+                    />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV41"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/operation"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/id_charge_TV41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV41"
+                    android:text="chargeOperation"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:text="stop"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/id_charge_stop_Btn14"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/id_charge_Start_Btn14"
+                    android:layout_toLeftOf="@id/id_charge_stop_Btn14"
+                    android:text="start"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    />
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV42"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/voltageicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV42"
+                    android:text="电压"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/id_charge_ImgV43"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/currenticon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/id_charge_ImgV43"
+                    android:text="电流"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV44"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/powericon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV44"
+                    android:text="充入电量"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_charge_ImgV45"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/elecicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_charge_ImgV45"
+                    android:text="状态"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:background="#ffeaf9f0">
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
 
 </LinearLayout>
+
+

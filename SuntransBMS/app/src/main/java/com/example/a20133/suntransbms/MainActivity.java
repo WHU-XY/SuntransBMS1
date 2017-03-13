@@ -132,7 +132,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 }else {
                     transaction.show(mFgforecast);
                 }
-                mImgforecast.setImageResource(R.drawable.whuxy6);
+                mImgforecast.setImageResource(R.drawable.eyegreen);
                 mTvforecast.setTextColor(0xff11c8a7);
                 break;
             case 1:
@@ -142,7 +142,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 }else {
                     transaction.show(mFgcharge);
                 }
-                mImgcharge.setImageResource(R.drawable.whuxy6);
+                mImgcharge.setImageResource(R.drawable.charge);
                 mTvcharge.setTextColor(0xff11c8a7);
                 break;
             case 2:
@@ -152,7 +152,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 }else {
                     transaction.show(mFgdischarge);
                 }
-                mImgdischarge.setImageResource(R.drawable.whuxy6);
+                mImgdischarge.setImageResource(R.drawable.discharge);
                 mTvdischarge.setTextColor(0xff11c8a7);
                 break;
             case 3:
@@ -162,7 +162,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 }else {
                     transaction.show(mFgsetting);
                 }
-                mImgsetting.setImageResource(R.drawable.whuxy6);
+                mImgsetting.setImageResource(R.drawable.settinggreen);
                 mTvsetting.setTextColor(0xff11c8a7);
                 break;
 
@@ -219,10 +219,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     private void resetAllTab() {
 
-        mImgforecast.setImageResource(R.drawable.whuxy1);
-        mImgcharge.setImageResource(R.drawable.whuxy1);
-        mImgdischarge.setImageResource(R.drawable.whuxy1);
-        mImgsetting.setImageResource(R.drawable.whuxy1);
+        mImgforecast.setImageResource(R.drawable.eyegray);
+        mImgcharge.setImageResource(R.drawable.chargegray);
+        mImgdischarge.setImageResource(R.drawable.dischargegray);
+        mImgsetting.setImageResource(R.drawable.settinggray);
 
 
         mTvforecast.setTextColor(0xff646565);
@@ -247,7 +247,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         Button btn_hehe = (Button) view.findViewById(R.id.btn_hehe);
         //1.构造一个PopupWindow，参数依次是加载的View，宽高
         final PopupWindow popWindow = new PopupWindow(view,
-                480, ViewGroup.LayoutParams.WRAP_CONTENT, true);
+                560, ViewGroup.LayoutParams.WRAP_CONTENT, true);
 
         popWindow.setAnimationStyle(R.anim.anim_pop);  //设置加载动画
 
@@ -263,7 +263,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 // 拦截后 PopupWindow的onTouchEvent不被调用，这样点击外部区域无法dismiss
             }
         });
-        popWindow.setBackgroundDrawable(new ColorDrawable(0x00000000));    //要为popWindow设置一个背景才有效
+        popWindow.setBackgroundDrawable(new ColorDrawable(0x00999999));    //要为popWindow设置一个背景才有效
 
 
         //设置popupWindow显示的位置，参数依次是参照View，x轴的偏移量，y轴的偏移量

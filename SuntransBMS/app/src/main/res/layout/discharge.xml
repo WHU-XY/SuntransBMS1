@@ -2,12 +2,403 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Are you sure?"
-        android:textSize="40sp"
-        android:layout_gravity="center"/>
+    android:gravity="center"
+    android:background="#ffeaf9f0">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:id="@+id/id_Leftmenu_LL"
+            android:layout_marginTop="20dp"
+            >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="#ffeaf9f0"
+                android:gravity="bottom">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="操作"
+                    android:layout_marginLeft="20dp"
+                    />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <ImageView
+                    android:id="@+id/id_discharge_ImgV11"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/operation"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/id_discharge_TV11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_discharge_ImgV11"
+                    android:text="放电-电池#1"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:text="stop"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/id_discharge_stop_Btn11"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/id_discharge_Start_Btn11"
+                    android:layout_toLeftOf="@id/id_discharge_stop_Btn11"
+                    android:text="start"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <ImageView
+                    android:id="@+id/id_discharge_ImgV21"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/operation"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/id_discharge_TV21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_discharge_ImgV21"
+                    android:text="放电-电池#2"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:text="stop"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/id_discharge_stop_Btn12"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/id_discharge_Start_Btn12"
+                    android:layout_toLeftOf="@id/id_discharge_stop_Btn12"
+                    android:text="start"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    />
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <ImageView
+                    android:id="@+id/id_discharge_ImgV31"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/operation"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/id_discharge_TV31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_discharge_ImgV31"
+                    android:text="放电-电池#3"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:text="stop"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/id_discharge_stop_Btn13"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/id_discharge_Start_Btn13"
+                    android:layout_toLeftOf="@id/id_discharge_stop_Btn13"
+                    android:text="start"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    />
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <ImageView
+                    android:id="@+id/id_discharge_ImgV41"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/operation"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/id_discharge_TV41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_discharge_ImgV41"
+                    android:text="放电-电池#4"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:text="stop"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/id_discharge_stop_Btn14"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/id_discharge_Start_Btn14"
+                    android:layout_toLeftOf="@id/id_discharge_stop_Btn14"
+                    android:text="start"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    />
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="#ffeaf9f0"
+                android:gravity="bottom">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="参数"
+                    android:layout_marginLeft="20dp"
+                    />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_discharge_ImgV22"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/voltageicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_discharge_ImgV22"
+                    android:text="dischargeOutputVoltage"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_discharge_ImgV25"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/elecicon"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_discharge_ImgV25"
+                    android:text="batteryDischargeCapacity"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout style="@style/common_horizontal_division_line_style"
+                android:layout_marginLeft="90dp">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/id_discharge_ImgV24"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/time"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_discharge_ImgV24"
+                    android:text="actualDischargeCapacity"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="#ffeaf9f0"
+                android:gravity="bottom">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电池#3"
+                    android:layout_marginLeft="20dp"
+                    />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:id="@+id/id_discharge_TV12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AH"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/id_discharge_voltage_Btn12"
+                    android:layout_toRightOf="@id/id_discharge_TV12"
+                    android:text="电压"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/id_discharge_current_Btn12"
+                    android:layout_toRightOf="@id/id_discharge_voltage_Btn12"
+                    android:text="电压"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/id_discharge_volume_Btn12"
+                    android:layout_toRightOf="@id/id_discharge_current_Btn12"
+                    android:text="电压"
+                    android:textColor="#ffffff"
+                    android:background="#ff7bdfc2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:background="#ffffffff"
+                >
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
 
 </LinearLayout>
+
+
