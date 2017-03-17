@@ -18,7 +18,6 @@
             android:layout_marginTop="20dp"
             >
 
-
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="40dp"
@@ -49,8 +48,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/id_charge_check_ImgV11"
-                    android:text="chargePowerVoltage"
+                    android:text="充电电源电压"
                     android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/id_charge_check_TV11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
                     android:textSize="20sp"
                     android:layout_centerVertical="true"
                     />
@@ -74,8 +82,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/id_charge_check_ImgV12"
-                    android:text="chargeAlternatingCurrent"
+                    android:text="充电交流电流"
                     android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/id_charge_check_TV12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
                     android:textSize="20sp"
                     android:layout_centerVertical="true"
                     />
@@ -102,8 +119,17 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="20dp"
                     android:layout_toRightOf="@id/id_charge_check_ImgV13"
-                    android:text="chargeInputPower"
+                    android:text="充电输入功率"
                     android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/id_charge_check_TV13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
 
             </RelativeLayout>
             <LinearLayout style="@style/common_horizontal_division_line_style"
@@ -125,8 +151,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/id_charge_check_ImgV14"
-                    android:text="sourcePowerFactor"
+                    android:text="电源功率因数"
                     android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/id_charge_check_TV14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
                     android:textSize="20sp"
                     android:layout_centerVertical="true"
                     />
@@ -151,8 +186,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/id_charge_check_ImgV15"
-                    android:text="chargePowerConsumption"
+                    android:text="充电耗电量"
                     android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/id_charge_check_TV15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
                     android:textSize="20sp"
                     android:layout_centerVertical="true"
                     />
@@ -179,8 +223,17 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="20dp"
                     android:layout_toRightOf="@id/id_charge_check_ImgV16"
-                    android:text="chargeBatterySideVoltage"
+                    android:text="电池组电压"
                     android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/id_charge_check_TV16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
 
             </RelativeLayout>
             <LinearLayout style="@style/common_horizontal_division_line_style"
@@ -202,8 +255,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/id_charge_check_ImgV17"
-                    android:text="chargeBatterySideCurrent"
+                    android:text="电池组电流"
                     android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/id_charge_check_TV17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
                     android:textSize="20sp"
                     android:layout_centerVertical="true"
                     />
@@ -230,6 +292,15 @@
                     android:layout_toRightOf="@id/id_charge_check_ImgV18"
                     android:text="电池组状态"
                     android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/id_charge_check_TV18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
                     android:textSize="20sp"
                     android:layout_centerVertical="true"
                     />
@@ -268,7 +339,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/id_charge_ImgV11"
-                    android:text="chargeOperation"
+                    android:text="充电操作"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
                     android:layout_centerVertical="true"
@@ -278,7 +349,7 @@
                     android:layout_height="40dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="5dp"
-                    android:text="stop"
+                    android:text="停止"
                     android:textColor="#ffffff"
                     android:background="#ff7bdfc2"
                     android:layout_centerVertical="true"
@@ -289,7 +360,7 @@
                     android:layout_height="40dp"
                     android:id="@+id/id_charge_Start_Btn11"
                     android:layout_toLeftOf="@id/id_charge_stop_Btn11"
-                    android:text="start"
+                    android:text="开始"
                     android:textColor="#ffffff"
                     android:background="#ff7bdfc2"
                     android:layout_centerVertical="true"
@@ -433,7 +504,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/id_charge_ImgV21"
-                    android:text="chargeOperation"
+                    android:text="充电操作"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
                     android:layout_centerVertical="true"
@@ -443,7 +514,7 @@
                     android:layout_height="40dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="5dp"
-                    android:text="stop"
+                    android:text="停止"
                     android:textColor="#ffffff"
                     android:background="#ff7bdfc2"
                     android:layout_centerVertical="true"
@@ -454,7 +525,7 @@
                     android:layout_height="40dp"
                     android:id="@+id/id_charge_Start_Btn12"
                     android:layout_toLeftOf="@id/id_charge_stop_Btn12"
-                    android:text="start"
+                    android:text="开始"
                     android:textColor="#ffffff"
                     android:background="#ff7bdfc2"
                     android:layout_centerVertical="true"
@@ -597,7 +668,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/id_charge_ImgV31"
-                    android:text="chargeOperation"
+                    android:text="充电操作"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
                     android:layout_centerVertical="true"
@@ -607,7 +678,7 @@
                     android:layout_height="40dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="5dp"
-                    android:text="stop"
+                    android:text="停止"
                     android:textColor="#ffffff"
                     android:background="#ff7bdfc2"
                     android:layout_centerVertical="true"
@@ -618,7 +689,7 @@
                     android:layout_height="40dp"
                     android:id="@+id/id_charge_Start_Btn13"
                     android:layout_toLeftOf="@id/id_charge_stop_Btn13"
-                    android:text="start"
+                    android:text="开始"
                     android:textColor="#ffffff"
                     android:background="#ff7bdfc2"
                     android:layout_centerVertical="true"
@@ -761,7 +832,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/id_charge_ImgV41"
-                    android:text="chargeOperation"
+                    android:text="充电操作"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
                     android:layout_centerVertical="true"
@@ -771,7 +842,7 @@
                     android:layout_height="40dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="5dp"
-                    android:text="stop"
+                    android:text="停止"
                     android:textColor="#ffffff"
                     android:background="#ff7bdfc2"
                     android:layout_centerVertical="true"
@@ -782,7 +853,7 @@
                     android:layout_height="40dp"
                     android:id="@+id/id_charge_Start_Btn14"
                     android:layout_toLeftOf="@id/id_charge_stop_Btn14"
-                    android:text="start"
+                    android:text="开始"
                     android:textColor="#ffffff"
                     android:background="#ff7bdfc2"
                     android:layout_centerVertical="true"

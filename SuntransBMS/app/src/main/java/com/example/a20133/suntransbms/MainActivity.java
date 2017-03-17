@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MotionEvent;
@@ -50,17 +49,51 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     private Button btn_show;
     private Context mContext;
+    private ImageButton queryButton;
+//    /*webservice*/
+//    /*private ImageButton queryButton;
+
+//    private TextView resultView11;
+//    private TextView resultView12;
+//    private TextView resultView13;
+//    private TextView resultView14;
+//    private TextView resultView15;
+//    private TextView resultView16;
+//    private TextView resultView17;
+//    private TextView resultView21;
+//    private TextView resultView22;
+//    private TextView resultView23;
+//    private TextView resultView24;
+//    private TextView resultView25;
+//    private TextView resultView26;
+//    private TextView resultView27;
+//    private TextView resultView31;
+//    private TextView resultView32;
+//    private TextView resultView33;
+//    private TextView resultView34;
+//    private TextView resultView35;
+//    private TextView resultView36;
+//    private TextView resultView37;
+//    private TextView resultView41;
+//    private TextView resultView42;
+//    private TextView resultView43;
+//    private TextView resultView44;
+//    private TextView resultView45;
+//    private TextView resultView46;
+//    private TextView resultView47;*/
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ((GlobalData)getApplication()).setCases(1);
         initView();
 
         initEvent();
 
         setSelect(0);
+
 //        mContext = MainActivity.this;
 //        btn_show = (Button) findViewById(R.id.id_mTvtopBtn);
 //       btn_show.setOnClickListener(new View.OnClickListener() {
@@ -88,6 +121,19 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 initPopWindow(v);
             }
         });
+//        /*queryButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                启动后台异步线程进行连接webService操作，并且根据返回结果在主线程中改变UI
+//                Forcastwebservice queryAddressTask = new Forcastwebservice(resultView11, resultView12, resultView13, resultView14, resultView15, resultView16, resultView17,
+//                        resultView21, resultView22, resultView23, resultView24, resultView25, resultView26, resultView27,
+//                        resultView31, resultView32, resultView33, resultView34, resultView35, resultView36, resultView37,
+//                        resultView41, resultView42, resultView43, resultView44, resultView45, resultView46, resultView47);
+//               启动后台任务
+//                queryAddressTask.execute();
+//            }
+//        });*/
 
     }
 
@@ -110,8 +156,45 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
         mContext = MainActivity.this;
         btn_show = (Button) findViewById(R.id.id_mTvtopBtn);
-
         mLeftMenu = (SlidingMenu) findViewById(R.id.id_menu);
+        queryButton = (ImageButton)findViewById(R.id.query_btn);
+//       /* queryButton = (ImageButton)findViewById(R.id.query_btn);
+//
+//        resultView11 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV11);
+//        resultView12 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV12);
+//        resultView13 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV13);
+//        resultView14 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV14);
+//        resultView15 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV15);
+//        resultView16 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV16);
+//        resultView17 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV17);
+//        resultView21 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV21);
+//        resultView22 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV22);
+//        resultView23 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV23);
+//        resultView24 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV24);
+//        resultView25 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV25);
+//        resultView26 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV26);
+//        resultView27 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV27);
+//        resultView31 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV31);
+//        resultView32 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV32);
+//        resultView33 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV33);
+//        resultView34 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV34);
+//        resultView35 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV35);
+//        resultView36 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV36);
+//        resultView37 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV37);
+//        resultView41 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV41);
+//        resultView42 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV42);
+//        resultView43 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV43);
+//        resultView44 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV44);
+//        resultView45 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV45);
+//        resultView46 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV46);
+//        resultView47 = (TextView) getFragmentManager().findFragmentById(R.id.id_Flcontent).getView().findViewById(R.id.id_forcast_TV47);*/
+
+
+
+
+
+
+
 
     }
 
@@ -126,44 +209,48 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         switch (i) {
 
             case 0:
-                if(mFgforecast==null){
+                //if(mFgforecast==null){
                     mFgforecast = new ForecastFragment();
                     transaction.add(R.id.id_Flcontent,mFgforecast);
-                }else {
-                    transaction.show(mFgforecast);
-                }
+              //  }else {
+                   transaction.show(mFgforecast);
+             //   }
                 mImgforecast.setImageResource(R.drawable.eyegreen);
                 mTvforecast.setTextColor(0xff11c8a7);
+                ((GlobalData)getApplication()).setCases(1);
                 break;
             case 1:
-               if(mFgcharge==null){
+              // if(mFgcharge==null){
                     mFgcharge = new ChargeFragment();
                     transaction.add(R.id.id_Flcontent,mFgcharge);
-                }else {
+               // }else {
                     transaction.show(mFgcharge);
-                }
+               // }
                 mImgcharge.setImageResource(R.drawable.charge);
                 mTvcharge.setTextColor(0xff11c8a7);
+                ((GlobalData)getApplication()).setCases(2);
                 break;
             case 2:
-                if(mFgdischarge==null){
+                //if(mFgdischarge==null){
                     mFgdischarge = new DischargeFragment();
                     transaction.add(R.id.id_Flcontent,mFgdischarge);
-                }else {
+                //}else {
                     transaction.show(mFgdischarge);
-                }
+                //}
                 mImgdischarge.setImageResource(R.drawable.discharge);
                 mTvdischarge.setTextColor(0xff11c8a7);
+                ((GlobalData)getApplication()).setCases(3);
                 break;
             case 3:
-                if(mFgsetting==null){
+                //if(mFgsetting==null){
                     mFgsetting = new SettingFragment();
                     transaction.add(R.id.id_Flcontent,mFgsetting);
-                }else {
+                //}else {
                     transaction.show(mFgsetting);
-                }
+                //}
                 mImgsetting.setImageResource(R.drawable.settinggreen);
                 mTvsetting.setTextColor(0xff11c8a7);
+                ((GlobalData)getApplication()).setCases(4);
                 break;
 
 
@@ -198,19 +285,19 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
             case R.id.id_mTabforecast:
                 setSelect(0);
-
+                ((GlobalData)getApplication()).setCases(1);
               break;
             case R.id.id_mTabcharge:
                 setSelect(1);
-
+                ((GlobalData)getApplication()).setCases(2);
               break;
             case R.id.id_mTabdischarge:
                 setSelect(2);
-
+                ((GlobalData)getApplication()).setCases(3);
                break;
             case R.id.id_mTabsetting:
                 setSelect(3);
-
+                ((GlobalData)getApplication()).setCases(4);
               break;
 
         }

@@ -6,15 +6,18 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 /**
  * Created by 20133 on 2017/3/7.
  */
 
 public class SettingFragment extends Fragment {
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.setting,container,false);
+        View view =  inflater.inflate(R.layout.setting,container,false);
+        return view;
     }
 }
