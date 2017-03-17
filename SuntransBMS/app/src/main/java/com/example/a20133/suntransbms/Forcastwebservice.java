@@ -23,6 +23,9 @@ class Forcastwebservice extends AsyncTask<Object, Object, Void> {
     private TextView resultView15;
     private TextView resultView16;
     private TextView resultView17;
+    private TextView resultView18;
+    private TextView resultView19;
+    private TextView resultView10;
     private TextView resultView21;
     private TextView resultView22;
     private TextView resultView23;
@@ -30,6 +33,9 @@ class Forcastwebservice extends AsyncTask<Object, Object, Void> {
     private TextView resultView25;
     private TextView resultView26;
     private TextView resultView27;
+    private TextView resultView28;
+    private TextView resultView29;
+    private TextView resultView20;
     private TextView resultView31;
     private TextView resultView32;
     private TextView resultView33;
@@ -37,6 +43,9 @@ class Forcastwebservice extends AsyncTask<Object, Object, Void> {
     private TextView resultView35;
     private TextView resultView36;
     private TextView resultView37;
+    private TextView resultView38;
+    private TextView resultView39;
+    private TextView resultView30;
     private TextView resultView41;
     private TextView resultView42;
     private TextView resultView43;
@@ -44,16 +53,19 @@ class Forcastwebservice extends AsyncTask<Object, Object, Void> {
     private TextView resultView45;
     private TextView resultView46;
     private TextView resultView47;
+    private TextView resultView48;
+    private TextView resultView49;
+    private TextView resultView40;
     ArrayList<String> list1 = new ArrayList<>();
     ArrayList<String> list2 = new ArrayList<>();
     ArrayList<String> list3 = new ArrayList<>();
     ArrayList<String> list4 = new ArrayList<>();
 
 
-    public Forcastwebservice(TextView textView11,TextView textView12,TextView textView13,TextView textView14,TextView textView15,TextView textView16,TextView textView17,
-                             TextView textView21,TextView textView22,TextView textView23,TextView textView24,TextView textView25,TextView textView26,TextView textView27,
-                             TextView textView31,TextView textView32,TextView textView33,TextView textView34,TextView textView35,TextView textView36,TextView textView37,
-                             TextView textView41,TextView textView42,TextView textView43,TextView textView44,TextView textView45,TextView textView46,TextView textView47){
+    public Forcastwebservice(TextView textView11,TextView textView12,TextView textView13,TextView textView14,TextView textView15,TextView textView16,TextView textView17,TextView textView18,TextView textView19,TextView textView10,
+                             TextView textView21,TextView textView22,TextView textView23,TextView textView24,TextView textView25,TextView textView26,TextView textView27,TextView textView28,TextView textView29,TextView textView20,
+                             TextView textView31,TextView textView32,TextView textView33,TextView textView34,TextView textView35,TextView textView36,TextView textView37,TextView textView38,TextView textView39,TextView textView30,
+                             TextView textView41,TextView textView42,TextView textView43,TextView textView44,TextView textView45,TextView textView46,TextView textView47,TextView textView48,TextView textView49,TextView textView40){
         super();
         this.resultView11 = textView11;
         this.resultView12 = textView12;
@@ -62,6 +74,9 @@ class Forcastwebservice extends AsyncTask<Object, Object, Void> {
         this.resultView15 = textView15;
         this.resultView16 = textView16;
         this.resultView17 = textView17;
+        this.resultView18 = textView18;
+        this.resultView19 = textView19;
+        this.resultView10 = textView10;
         this.resultView21 = textView21;
         this.resultView22 = textView22;
         this.resultView23 = textView23;
@@ -69,6 +84,9 @@ class Forcastwebservice extends AsyncTask<Object, Object, Void> {
         this.resultView25 = textView25;
         this.resultView26 = textView26;
         this.resultView27 = textView27;
+        this.resultView28 = textView28;
+        this.resultView29 = textView29;
+        this.resultView20 = textView20;
         this.resultView31 = textView31;
         this.resultView32 = textView32;
         this.resultView33 = textView33;
@@ -76,6 +94,9 @@ class Forcastwebservice extends AsyncTask<Object, Object, Void> {
         this.resultView35 = textView35;
         this.resultView36 = textView36;
         this.resultView37 = textView37;
+        this.resultView38 = textView38;
+        this.resultView39 = textView39;
+        this.resultView30 = textView30;
         this.resultView41 = textView41;
         this.resultView42 = textView42;
         this.resultView43 = textView43;
@@ -83,6 +104,10 @@ class Forcastwebservice extends AsyncTask<Object, Object, Void> {
         this.resultView45 = textView45;
         this.resultView46 = textView46;
         this.resultView47 = textView47;
+        this.resultView48 = textView48;
+        this.resultView49 = textView49;
+        this.resultView40 = textView40;
+
 
     }
 
@@ -129,6 +154,20 @@ class Forcastwebservice extends AsyncTask<Object, Object, Void> {
         resultView45.setText(list4.get(11)+"%");
         resultView46.setText(list4.get(12)+"AH");
         resultView47.setText(list4.get(1));
+
+        resultView18.setText(list1.get(14)+"Vac");
+        resultView19.setText(list1.get(15)+"Aac");
+        resultView10.setText(list1.get(16)+"AH");
+        resultView28.setText(list2.get(14)+"Vac");
+        resultView29.setText(list2.get(15)+"Aac");
+        resultView20.setText(list2.get(16)+"AH");
+        resultView38.setText(list3.get(14)+"Vac");
+        resultView39.setText(list3.get(15)+"Aac");
+        resultView30.setText(list3.get(16)+"AH");
+        resultView48.setText(list4.get(14)+"Vac");
+        resultView49.setText(list4.get(15)+"Aac");
+        resultView40.setText(list4.get(16)+"AH");
+
 
     }
 
