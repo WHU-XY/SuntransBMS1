@@ -1,7 +1,9 @@
 package com.example.a20133.suntransbms;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -12,6 +14,8 @@ import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -127,6 +131,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         initEvent();
 
         setSelect(0);
+        initState();
 //        mContext = MainActivity.this;
 //        btn_show = (Button) findViewById(R.id.id_mTvtopBtn);
 //       btn_show.setOnClickListener(new View.OnClickListener() {
@@ -137,6 +142,15 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 //        });
 //        mLeftMenu = (SlidingMenu) findViewById(R.id.id_menu);
 
+    }
+
+    private void initState() {
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
+//            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN); 初始界面全屏，下拉之后显示状态栏
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            getWindow().setStatusBarColor(Color.parseColor("#afefe3"));
+
+        }
     }
 
     @Override
@@ -231,6 +245,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
                     Chargewebservice1 chargeAddressTask1 = new Chargewebservice1(textView11,textView12,textView13,textView14,textView15,textView16,textView17,textView18);
                     chargeAddressTask1.execute();
+
+                    settingtestview11.setText("100");
+                    settingtestview12.setText("12");
+                    settingtestview13.setText("10.8");
                 }else if(cases2 == 2){
                     Forcastwebservice2 forecastAddressTask2 = new Forcastwebservice2(resultView11, resultView12, resultView13, resultView14, resultView15, resultView16, resultView17,resultView18,resultView19,resultView10,
                             resultView21, resultView22, resultView23, resultView24, resultView25, resultView26, resultView27, resultView28, resultView29, resultView20,
@@ -241,16 +259,16 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                     Chargewebservice2 chargeAddressTask2 = new Chargewebservice2(textView11,textView12,textView13,textView14,textView15,textView16,textView17,textView18);
                     chargeAddressTask2.execute();
 
+                    settingtestview11.setText("500");
+                    settingtestview12.setText("2");
+                    settingtestview13.setText("1.8");
+
                 }
 
 
                    // Dischargewebservice dischargeAddressTask = new Dischargewebservice(dischargetestview11);
                    // dischargeAddressTask.execute();
 
-                    settingtestview11.setText("100");
-                    settingtestview12.setText("12");
-                    settingtestview13.setText("10.8");
-               // }
 
             }
         });

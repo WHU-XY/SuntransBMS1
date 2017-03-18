@@ -3,7 +3,8 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="60dp"
     android:gravity="center_vertical"
-    android:background="#ffafefe3">
+    android:background="#ffafefe3"
+    >
 
     <ImageButton
         android:onClick="toggleMenu"

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#afefe3"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="三川智能蓄电池管理系统"
+        android:textSize="25dp"
+        android:id="@+id/id_splash_TV11"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="ST-SBMS"
+        android:textSize="25dp"
+        android:id="@+id/id_splash_TV12"
+        android:layout_below="@id/id_splash_TV11"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/id_splash_TV12"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_80x"
+        />
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/buttomimageabout"
+        android:layout_marginBottom="20dp"
+        />
+
+
+</RelativeLayout>
