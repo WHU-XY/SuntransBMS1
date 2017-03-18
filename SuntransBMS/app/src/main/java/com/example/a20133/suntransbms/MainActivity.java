@@ -19,6 +19,8 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 import Subtrans.slidingmenu.view.SlidingMenu;
 
 
@@ -107,12 +109,19 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     private TextView dischargetestview11;
 
+    private TextView settingtestview11;
+    private TextView settingtestview12;
+    private TextView settingtestview13;
+
+    ArrayList<String> list5 = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ((GlobalData)getApplication()).setCases(0);
+        ((GlobalData)getApplication()).setCases2(1);
         initView();
 
         initEvent();
@@ -175,7 +184,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         resultView19=(TextView)findViewById(R.id.id_charge_TV12);
         resultView10=(TextView)findViewById(R.id.id_charge_TV13);
 
-        resultView27=(TextView)findViewById(R.id.id_charge_TV21);
+        resultView28=(TextView)findViewById(R.id.id_charge_TV21);
         resultView29=(TextView)findViewById(R.id.id_charge_TV22);
         resultView20=(TextView)findViewById(R.id.id_charge_TV23);
 
@@ -183,11 +192,15 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         resultView39=(TextView)findViewById(R.id.id_charge_TV32);
         resultView30=(TextView)findViewById(R.id.id_charge_TV33);
 
-        resultView47=(TextView)findViewById(R.id.id_charge_TV41);
+        resultView48=(TextView)findViewById(R.id.id_charge_TV41);
         resultView49=(TextView)findViewById(R.id.id_charge_TV42);
         resultView40=(TextView)findViewById(R.id.id_charge_TV43);
 
         dischargetestview11 =(TextView)findViewById(R.id.id_discharge_parameter_TV11);
+
+        settingtestview11 = (TextView)findViewById(R.id.id_setting_TV11);
+        settingtestview12 = (TextView)findViewById(R.id.id_setting_TV12);
+        settingtestview13 = (TextView)findViewById(R.id.id_setting_TV13);
 
     }
 
@@ -208,22 +221,37 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
        queryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int cases = ((GlobalData)getApplication()).getCases();
-                if(cases == 1){
-                    Forcastwebservice forecastAddressTask = new Forcastwebservice(resultView11, resultView12, resultView13, resultView14, resultView15, resultView16, resultView17,resultView18,resultView19,resultView10,
+                int cases2 = ((GlobalData)getApplication()).getCases2();
+                if(cases2 == 1){
+                    Forcastwebservice1 forecastAddressTask1 = new Forcastwebservice1(resultView11, resultView12, resultView13, resultView14, resultView15, resultView16, resultView17,resultView18,resultView19,resultView10,
                             resultView21, resultView22, resultView23, resultView24, resultView25, resultView26, resultView27, resultView28, resultView29, resultView20,
                             resultView31, resultView32, resultView33, resultView34, resultView35, resultView36, resultView37,resultView38,resultView39,resultView30,
                             resultView41, resultView42, resultView43, resultView44, resultView45, resultView46, resultView47, resultView48, resultView49, resultView40);
-                    forecastAddressTask.execute();
-                } else  if(cases == 2){
-                    Chargewebservice chargeAddressTask = new Chargewebservice(textView11,textView12,textView13,textView14,textView15,textView16,textView17,textView18);
-                    chargeAddressTask.execute();
+                    forecastAddressTask1.execute();
 
-                }else if(cases == 3){
-                    Dischargewebservice dischargeAddressTask = new Dischargewebservice(dischargetestview11);
+                    Chargewebservice1 chargeAddressTask1 = new Chargewebservice1(textView11,textView12,textView13,textView14,textView15,textView16,textView17,textView18);
+                    chargeAddressTask1.execute();
+                }else if(cases2 == 2){
+                    Forcastwebservice2 forecastAddressTask2 = new Forcastwebservice2(resultView11, resultView12, resultView13, resultView14, resultView15, resultView16, resultView17,resultView18,resultView19,resultView10,
+                            resultView21, resultView22, resultView23, resultView24, resultView25, resultView26, resultView27, resultView28, resultView29, resultView20,
+                            resultView31, resultView32, resultView33, resultView34, resultView35, resultView36, resultView37,resultView38,resultView39,resultView30,
+                            resultView41, resultView42, resultView43, resultView44, resultView45, resultView46, resultView47, resultView48, resultView49, resultView40);
+                    forecastAddressTask2.execute();
 
-                    dischargeAddressTask.execute();
+                    Chargewebservice2 chargeAddressTask2 = new Chargewebservice2(textView11,textView12,textView13,textView14,textView15,textView16,textView17,textView18);
+                    chargeAddressTask2.execute();
+
                 }
+
+
+                   // Dischargewebservice dischargeAddressTask = new Dischargewebservice(dischargetestview11);
+                   // dischargeAddressTask.execute();
+
+                    settingtestview11.setText("100");
+                    settingtestview12.setText("12");
+                    settingtestview13.setText("10.8");
+               // }
+
             }
         });
 
@@ -255,6 +283,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         mFgcharge = new ChargeFragment();
         mFgdischarge = new DischargeFragment();
         mFgsetting = new SettingFragment();
+        list5 = ((GlobalData)getApplication()).getList1();
     }
 
 
@@ -282,19 +311,19 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                     transaction.show(mFgcharge);
                 mImgcharge.setImageResource(R.drawable.charge);
                 mTvcharge.setTextColor(0xff11c8a7);
-                ((GlobalData)getApplication()).setCases(2);
+                ((GlobalData)getApplication()).setCases(1);
                 break;
             case 2:
                     transaction.show(mFgdischarge);
                 mImgdischarge.setImageResource(R.drawable.discharge);
                 mTvdischarge.setTextColor(0xff11c8a7);
-                ((GlobalData)getApplication()).setCases(3);
+                ((GlobalData)getApplication()).setCases(1);
                 break;
             case 3:
                     transaction.show(mFgsetting);
                 mImgsetting.setImageResource(R.drawable.settinggreen);
                 mTvsetting.setTextColor(0xff11c8a7);
-                ((GlobalData)getApplication()).setCases(4);
+                ((GlobalData)getApplication()).setCases(1);
                 break;
 
 
@@ -369,7 +398,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     @Override
     public boolean onCreatePanelMenu(int featureId, Menu menu) {
         getMenuInflater().inflate(R.menu.main,menu);
-
         return true;
     }
 
@@ -408,6 +436,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             public void onClick(View v) {
                 btn_show.setText("武汉大学体育馆基站");
                 Toast.makeText(MainActivity.this, "你点击了嘻嘻~", Toast.LENGTH_SHORT).show();
+                ((GlobalData)getApplication()).setCases2(1);
                 popWindow.dismiss();
             }
         });
@@ -416,6 +445,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             public void onClick(View v) {
                 btn_show.setText("武汉大学图书馆基站");
                 Toast.makeText(MainActivity.this, "你点击了呵呵~", Toast.LENGTH_SHORT).show();
+                ((GlobalData)getApplication()).setCases2(2);
                 popWindow.dismiss();
             }
         });

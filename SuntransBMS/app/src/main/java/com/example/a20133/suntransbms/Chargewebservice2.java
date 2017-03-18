@@ -10,10 +10,10 @@ import org.ksoap2.transport.HttpTransportSE;
 import java.util.ArrayList;
 
 /**
- * Created by 20133 on 2017/3/17.
+ * Created by 20133 on 2017/3/18.
  */
 
-class Chargewebservice extends AsyncTask<Object, Object, Void> {
+class Chargewebservice2 extends AsyncTask<Object, Object, Void> {
     private TextView textview11;
     private TextView textview12;
     private TextView textview13;
@@ -22,11 +22,13 @@ class Chargewebservice extends AsyncTask<Object, Object, Void> {
     private TextView textview16;
     private TextView textview17;
     private TextView textview18;
+    private TextView resultView28;
+    private TextView resultView29;
+    private TextView resultView20;
 
-    ArrayList<String> list1 = new ArrayList<>();
+    ArrayList<String> list1 =new ArrayList<>();
 
-
-    public Chargewebservice(TextView textView11,TextView textView12,TextView textView13,TextView textView14,TextView textView15,TextView textView16,TextView textView17,TextView textView18) {
+    public Chargewebservice2(TextView textView11, TextView textView12, TextView textView13, TextView textView14, TextView textView15, TextView textView16, TextView textView17, TextView textView18) {
         this.textview11 = textView11;
         this.textview12 = textView12;
         this.textview13 = textView13;
@@ -35,6 +37,7 @@ class Chargewebservice extends AsyncTask<Object, Object, Void> {
         this.textview16 = textView16;
         this.textview17 = textView17;
         this.textview18 = textView18;
+
     }
 
     @Override
@@ -59,6 +62,7 @@ class Chargewebservice extends AsyncTask<Object, Object, Void> {
         textview16.setText(list1.get(9)+"Vdc");
         textview17.setText(list1.get(10)+"Adc");
         textview18.setText("维护");
+
     }
     public void getRemoteInfo() throws Exception{
         String WSDL_URI = "http://www.suntrans.net:8602/WebService.asmx";//wsdl 的uri
@@ -67,7 +71,7 @@ class Chargewebservice extends AsyncTask<Object, Object, Void> {
 
         SoapObject request = new SoapObject(namespace, methodName);
         // 设置需调用WebService接口需要传入的两个参数mobileCode、userId
-        request.addProperty("BID", 1);
+        request.addProperty("BID", 2);
 //        request.addProperty("userId", "");
 
         //创建SoapSerializationEnvelope 对象，同时指定soap版本号(之前在wsdl中看到的)
@@ -91,3 +95,4 @@ class Chargewebservice extends AsyncTask<Object, Object, Void> {
     }
 
 }
+

@@ -10,10 +10,10 @@ import org.ksoap2.transport.HttpTransportSE;
 import java.util.ArrayList;
 
 /**
- * Created by 20133 on 2017/3/16.
+ * Created by 20133 on 2017/3/18.
  */
 
-class Forcastwebservice extends AsyncTask<Object, Object, Void> {
+class Forcastwebservice2 extends AsyncTask<Object, Object, Void> {
 
 
     private TextView resultView11;
@@ -62,10 +62,10 @@ class Forcastwebservice extends AsyncTask<Object, Object, Void> {
     ArrayList<String> list4 = new ArrayList<>();
 
 
-    public Forcastwebservice(TextView textView11,TextView textView12,TextView textView13,TextView textView14,TextView textView15,TextView textView16,TextView textView17,TextView textView18,TextView textView19,TextView textView10,
-                             TextView textView21,TextView textView22,TextView textView23,TextView textView24,TextView textView25,TextView textView26,TextView textView27,TextView textView28,TextView textView29,TextView textView20,
-                             TextView textView31,TextView textView32,TextView textView33,TextView textView34,TextView textView35,TextView textView36,TextView textView37,TextView textView38,TextView textView39,TextView textView30,
-                             TextView textView41,TextView textView42,TextView textView43,TextView textView44,TextView textView45,TextView textView46,TextView textView47,TextView textView48,TextView textView49,TextView textView40){
+    public Forcastwebservice2(TextView textView11, TextView textView12, TextView textView13, TextView textView14, TextView textView15, TextView textView16, TextView textView17, TextView textView18, TextView textView19, TextView textView10,
+                              TextView textView21, TextView textView22, TextView textView23, TextView textView24, TextView textView25, TextView textView26, TextView textView27, TextView textView28, TextView textView29, TextView textView20,
+                              TextView textView31, TextView textView32, TextView textView33, TextView textView34, TextView textView35, TextView textView36, TextView textView37, TextView textView38, TextView textView39, TextView textView30,
+                              TextView textView41, TextView textView42, TextView textView43, TextView textView44, TextView textView45, TextView textView46, TextView textView47, TextView textView48, TextView textView49, TextView textView40){
         super();
         this.resultView11 = textView11;
         this.resultView12 = textView12;
@@ -115,12 +115,12 @@ class Forcastwebservice extends AsyncTask<Object, Object, Void> {
     protected Void doInBackground(Object... params) {
         // 查询手机号码（段）信息*/
         try {
-           getRemoteInfo();
+            getRemoteInfo();
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-       return null;
+        return null;
     }
     @Override
     //此方法可以在主线程改变UI
@@ -178,7 +178,7 @@ class Forcastwebservice extends AsyncTask<Object, Object, Void> {
 
         SoapObject request = new SoapObject(namespace, methodName);
         // 设置需调用WebService接口需要传入的两个参数mobileCode、userId
-        request.addProperty("BID", 1);
+        request.addProperty("BID", 2);
 //        request.addProperty("userId", "");
 
         //创建SoapSerializationEnvelope 对象，同时指定soap版本号(之前在wsdl中看到的)
@@ -202,10 +202,12 @@ class Forcastwebservice extends AsyncTask<Object, Object, Void> {
                 switch (i){
                     case 0:
                         list1.add(j,soap3.getProperty(j).toString());
+
                         if(j==1){
                             String gettime = list1.get(1).substring(0,16);
                             gettime = gettime.replace("T"," ");
                             list1.set(1,gettime);
+
                         }
                         break;
                     case 1:
