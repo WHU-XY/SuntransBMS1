@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'Key2'
+            keyPassword '723395744'
+            storeFile file('D:/www/AndroidStudioProjiect/SuntransBMS/SuntransBMSKey.jks')
+            storePassword '723395744'
+        }
+    }
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
