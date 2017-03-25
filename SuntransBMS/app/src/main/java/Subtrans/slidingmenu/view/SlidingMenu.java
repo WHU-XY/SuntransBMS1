@@ -12,9 +12,6 @@ import android.widget.LinearLayout;
 
 import com.nineoldandroids.view.ViewHelper;
 
-/**
- * Created by 20133 on 2017/3/8.
- */
 
 public class SlidingMenu extends HorizontalScrollView {
 
@@ -23,9 +20,13 @@ public class SlidingMenu extends HorizontalScrollView {
     private ViewGroup mContent;
     private int mScreenWidth;
     private int mMenuWidth;
+    private int mMenuHeight;
     private int mMenuRightPadding = 50;
     private boolean once;
     private boolean isOpen;
+
+    private float pulldownY;
+    private float lastdownY;
    /*
    * 未使用自定义属性时*/
 
@@ -49,6 +50,7 @@ public class SlidingMenu extends HorizontalScrollView {
             mMenu = (ViewGroup) mWapper.getChildAt(0);
             mContent = (ViewGroup) mWapper.getChildAt(1);
             mMenuWidth =  mMenu.getLayoutParams().width = mScreenWidth*3/4;
+            mMenuHeight = mMenu.getLayoutParams().height;
             mContent.getLayoutParams().width = mScreenWidth;
             once = true;
         }
@@ -66,18 +68,35 @@ public class SlidingMenu extends HorizontalScrollView {
     }
 
     @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        switch(ev.getActionMasked()) {
+            case MotionEvent.ACTION_DOWN:
+                pulldownY=ev.getX();
+                lastdownY=pulldownY;
+                break;
+            case MotionEvent.ACTION_MOVE:
+                pulldownY=ev.getX();
+                int scrollX = (int) Math.abs(pulldownY-lastdownY);
+                if(scrollX>mMenuWidth/2){
+                     return   true;
+                } else return false;
+        }
+        return super.onInterceptTouchEvent(ev);
+    }
+
+    @Override
     public boolean onTouchEvent(MotionEvent ev) {
 
         int action = ev.getAction();
         switch (action){
             case MotionEvent.ACTION_UP:
                 int scrollX = getScrollX();
-                if(scrollX>= mMenuWidth/2){
+                if (scrollX >= mMenuWidth / 2) {
                     isOpen = false;
-                    this.smoothScrollTo(mMenuWidth,0);
-                }else{
+                    this.smoothScrollTo(mMenuWidth, 0);
+                } else {
                     isOpen = true;
-                    this.smoothScrollTo(0,0);
+                    this.smoothScrollTo(0, 0);
                 }
                return true;
         }

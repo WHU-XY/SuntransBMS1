@@ -18,6 +18,8 @@ public class SettingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.setting,container,false);
+        ((PullToRefreshLayout) view.findViewById(R.id.id_setting_fragment))
+                .setOnRefreshListener(new MyListener());
         return view;
     }
 }

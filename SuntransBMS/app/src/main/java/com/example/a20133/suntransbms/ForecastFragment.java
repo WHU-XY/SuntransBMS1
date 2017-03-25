@@ -26,8 +26,9 @@ public class ForecastFragment extends Fragment  {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         View view = inflater.inflate(R.layout.forecast, container, false);
+        ((PullToRefreshLayout) view.findViewById(R.id.id_forcast_fragment))
+                .setOnRefreshListener(new MyListener());
         return view;
     }
 

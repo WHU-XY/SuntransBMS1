@@ -4,11 +4,13 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MotionEvent;
@@ -24,7 +26,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-
 import Subtrans.slidingmenu.view.SlidingMenu;
 
 
@@ -119,6 +120,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     ArrayList<String> list5 = new ArrayList<>();
 
+    /*
+    * 下拉刷新*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,9 +130,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         ((GlobalData)getApplication()).setCases(0);
         ((GlobalData)getApplication()).setCases2(1);
         initView();
-
         initEvent();
-
         setSelect(0);
         initState();
 //        mContext = MainActivity.this;
@@ -273,6 +274,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             }
         });
 
+
     }
 
     private void initView() {
@@ -302,6 +304,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         mFgdischarge = new DischargeFragment();
         mFgsetting = new SettingFragment();
         list5 = ((GlobalData)getApplication()).getList1();
+
     }
 
 
@@ -453,7 +456,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             @Override
             public void onClick(View v) {
                 btn_show.setText("武汉大学体育馆基站");
-                Toast.makeText(MainActivity.this, "你点击了嘻嘻~", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "你选择了武汉大学体育馆基站", Toast.LENGTH_SHORT).show();
                 ((GlobalData)getApplication()).setCases2(1);
                 popWindow.dismiss();
             }
@@ -462,7 +465,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             @Override
             public void onClick(View v) {
                 btn_show.setText("武汉大学图书馆基站");
-                Toast.makeText(MainActivity.this, "你点击了呵呵~", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "你选择了武汉大学图书馆基站", Toast.LENGTH_SHORT).show();
                 ((GlobalData)getApplication()).setCases2(2);
                 popWindow.dismiss();
             }
