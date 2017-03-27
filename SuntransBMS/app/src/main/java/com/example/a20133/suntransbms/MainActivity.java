@@ -1,6 +1,7 @@
 package com.example.a20133.suntransbms;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -118,6 +119,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private TextView settingtestview12;
     private TextView settingtestview13;
 
+    private LoadingDialog dialog;
+
     ArrayList<String> list5 = new ArrayList<>();
 
     /*
@@ -133,6 +136,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         initEvent();
         setSelect(0);
         initState();
+
 //        mContext = MainActivity.this;
 //        btn_show = (Button) findViewById(R.id.id_mTvtopBtn);
 //       btn_show.setOnClickListener(new View.OnClickListener() {
@@ -270,7 +274,15 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                    // Dischargewebservice dischargeAddressTask = new Dischargewebservice(dischargetestview11);
                    // dischargeAddressTask.execute();
 
-
+                dialog =  new LoadingDialog(MainActivity.this);//.setMessage("正在加载...");
+                dialog.loadDialog();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog.removeDialog();
+                    }
+                },1000);
             }
         });
 

@@ -15,7 +15,7 @@ import android.view.WindowManager;
  */
 
 public class Splash extends Activity {
-    private final int SPLASH_DISPLAY_LENGHT = 3000;
+    private final int SPLASH_DISPLAY_LENGHT = 1000;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
