@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="employee"
+            type="com.example.a20133.suntranstest14.Employee"/>
+        <variable
+            name="presenter"
+            type="com.example.a20133.suntranstest14.MainActivity.Presenter"/>
+    </data>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="center_horizontal"
+             android:orientation="vertical"
+             tools:context="com.example.a20133.suntranstest14.MainActivity">
+
+             <EditText
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:onTextChanged="@{presenter.onTextChanged}"
+                 android:hint="输入 First Name"/>
+             <EditText
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:hint="输入 Last Name"/>
+             <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:onClick="@{presenter.onclick}"
+              android:text="@{employee.firstname}"
+             />
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:onClick="@{() -> presenter.onclicklistenerBinding(employee)}"
+                 android:text="@{employee.lastname}"
+                 />
+
+         </LinearLayout>
+</layout>

@@ -65,6 +65,7 @@ public class PullToRefreshLayout extends RelativeLayout {
     private Context mContext;
     private ImageButton queryButton;
     private View viewtop;
+    private LoadingDialog dialog;
 
 
 
@@ -428,6 +429,17 @@ public class PullToRefreshLayout extends RelativeLayout {
         protected void onPostExecute(String result)
         {
             changeState(REFRESHING);
+//            SelfdefineWeb selfdefineWebb = new SelfdefineWeb();
+//            selfdefineWebb.execute();
+            dialog =  new LoadingDialog(mContext);
+            dialog.loadDialog();
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    dialog.removeDialog();
+                }
+            },1000);
             if (mListener != null)
                 mListener.onRefresh(PullToRefreshLayout.this);
             hide();

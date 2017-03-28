@@ -240,7 +240,16 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
        queryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                webservicework();
+//                webservicework();
+                dialog =  new LoadingDialog(MainActivity.this);
+                dialog.loadDialog();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog.removeDialog();
+                    }
+                },1000);
             }
         });
 
