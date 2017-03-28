@@ -240,52 +240,52 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
        queryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int cases2 = ((GlobalData)getApplication()).getCases2();
-                if(cases2 == 1){
-                    Forcastwebservice1 forecastAddressTask1 = new Forcastwebservice1(resultView11, resultView12, resultView13, resultView14, resultView15, resultView16, resultView17,resultView18,resultView19,resultView10,
-                            resultView21, resultView22, resultView23, resultView24, resultView25, resultView26, resultView27, resultView28, resultView29, resultView20,
-                            resultView31, resultView32, resultView33, resultView34, resultView35, resultView36, resultView37,resultView38,resultView39,resultView30,
-                            resultView41, resultView42, resultView43, resultView44, resultView45, resultView46, resultView47, resultView48, resultView49, resultView40);
-                    forecastAddressTask1.execute();
-
-                    Chargewebservice1 chargeAddressTask1 = new Chargewebservice1(textView11,textView12,textView13,textView14,textView15,textView16,textView17,textView18);
-                    chargeAddressTask1.execute();
-
-                    settingtestview11.setText("100");
-                    settingtestview12.setText("12");
-                    settingtestview13.setText("10.8");
-                }else if(cases2 == 2){
-                    Forcastwebservice2 forecastAddressTask2 = new Forcastwebservice2(resultView11, resultView12, resultView13, resultView14, resultView15, resultView16, resultView17,resultView18,resultView19,resultView10,
-                            resultView21, resultView22, resultView23, resultView24, resultView25, resultView26, resultView27, resultView28, resultView29, resultView20,
-                            resultView31, resultView32, resultView33, resultView34, resultView35, resultView36, resultView37,resultView38,resultView39,resultView30,
-                            resultView41, resultView42, resultView43, resultView44, resultView45, resultView46, resultView47, resultView48, resultView49, resultView40);
-                    forecastAddressTask2.execute();
-
-                    Chargewebservice2 chargeAddressTask2 = new Chargewebservice2(textView11,textView12,textView13,textView14,textView15,textView16,textView17,textView18);
-                    chargeAddressTask2.execute();
-
-                    settingtestview11.setText("500");
-                    settingtestview12.setText("2");
-                    settingtestview13.setText("1.8");
-
-                }
-
-
-                   // Dischargewebservice dischargeAddressTask = new Dischargewebservice(dischargetestview11);
-                   // dischargeAddressTask.execute();
-
-                dialog =  new LoadingDialog(MainActivity.this);//.setMessage("正在加载...");
-                dialog.loadDialog();
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        dialog.removeDialog();
-                    }
-                },1000);
+                webservicework();
             }
         });
 
+
+    }
+
+    private void webservicework() {
+        int cases2 = ((GlobalData)getApplication()).getCases2();
+        if(cases2 == 1){
+            Forcastwebservice1 forecastAddressTask1 = new Forcastwebservice1(resultView11, resultView12, resultView13, resultView14, resultView15, resultView16, resultView17,resultView18,resultView19,resultView10,
+                    resultView21, resultView22, resultView23, resultView24, resultView25, resultView26, resultView27, resultView28, resultView29, resultView20,
+                    resultView31, resultView32, resultView33, resultView34, resultView35, resultView36, resultView37,resultView38,resultView39,resultView30,
+                    resultView41, resultView42, resultView43, resultView44, resultView45, resultView46, resultView47, resultView48, resultView49, resultView40);
+            forecastAddressTask1.execute();
+
+            Chargewebservice1 chargeAddressTask1 = new Chargewebservice1(textView11,textView12,textView13,textView14,textView15,textView16,textView17,textView18);
+            chargeAddressTask1.execute();
+
+            settingtestview11.setText("100");
+            settingtestview12.setText("12");
+            settingtestview13.setText("10.8");
+        }else if(cases2 == 2){
+            Forcastwebservice2 forecastAddressTask2 = new Forcastwebservice2(resultView11, resultView12, resultView13, resultView14, resultView15, resultView16, resultView17,resultView18,resultView19,resultView10,
+                    resultView21, resultView22, resultView23, resultView24, resultView25, resultView26, resultView27, resultView28, resultView29, resultView20,
+                    resultView31, resultView32, resultView33, resultView34, resultView35, resultView36, resultView37,resultView38,resultView39,resultView30,
+                    resultView41, resultView42, resultView43, resultView44, resultView45, resultView46, resultView47, resultView48, resultView49, resultView40);
+            forecastAddressTask2.execute();
+
+            Chargewebservice2 chargeAddressTask2 = new Chargewebservice2(textView11,textView12,textView13,textView14,textView15,textView16,textView17,textView18);
+            chargeAddressTask2.execute();
+
+            settingtestview11.setText("500");
+            settingtestview12.setText("2");
+            settingtestview13.setText("1.8");
+
+        }
+        dialog =  new LoadingDialog(MainActivity.this);
+        dialog.loadDialog();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                dialog.removeDialog();
+            }
+        },1000);
 
     }
 

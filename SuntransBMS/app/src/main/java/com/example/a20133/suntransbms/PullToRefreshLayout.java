@@ -6,18 +6,22 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.zip.Inflater;
 
 
 public class PullToRefreshLayout extends RelativeLayout {
@@ -59,6 +63,8 @@ public class PullToRefreshLayout extends RelativeLayout {
     private boolean canPullDown = true;
     private boolean canPullUp = true;
     private Context mContext;
+    private ImageButton queryButton;
+    private View viewtop;
 
 
 
@@ -148,6 +154,8 @@ public class PullToRefreshLayout extends RelativeLayout {
         LinearInterpolator lir = new LinearInterpolator();
         rotateAnimation.setInterpolator(lir);
         refreshingAnimation.setInterpolator(lir);
+        viewtop = LayoutInflater.from(mContext).inflate(R.layout.top,null);
+
     }
     private void hide()
     {
@@ -463,6 +471,8 @@ public class PullToRefreshLayout extends RelativeLayout {
                 .findViewById(R.id.loadstate_tv);
         loadingView = loadmoreView.findViewById(R.id.loading_icon);
         loadStateImageView = loadmoreView.findViewById(R.id.loadstate_iv);
+        queryButton = (ImageButton) viewtop.findViewById(R.id.query_btn);
+
     }
 
     @Override

@@ -167,8 +167,6 @@ class Forcastwebservice2 extends AsyncTask<Object, Object, Void> {
         resultView48.setText(list4.get(14)+"Vac");
         resultView49.setText(list4.get(15)+"Aac");
         resultView40.setText(list4.get(16)+"AH");
-
-
     }
 
     public void getRemoteInfo() throws Exception{
