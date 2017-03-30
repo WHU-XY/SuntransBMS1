@@ -7,10 +7,13 @@ package com.example.a20133.suntranstest14;
 public class Employee {
     private String firstname;
     private String lastname;
+    private String Voltage;
 
-    public Employee(String firstname, String lastname) {
+    public Employee(String firstname, String lastname,String Voltage) {
         this.firstname = firstname;
         this.lastname = lastname;
+        this.Voltage = Voltage;
+
     }
 
     public String getFirstname() {
@@ -27,5 +30,11 @@ public class Employee {
 
     public void setLastname(String lastname) {
         this.lastname = lastname;
+    }
+    public String getVoltage(){
+        return Voltage;
+    }
+    public void setVoltage(String Voltage){
+        this.Voltage = Voltage;
     }
 }
