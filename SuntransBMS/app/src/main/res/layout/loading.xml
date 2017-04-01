@@ -26,7 +26,7 @@
 
             <TextView
                 android:layout_marginBottom="20dp"
-                android:id="@+id/tv_text"
+                android:id="@+id/tv_refresh_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="正在刷新"

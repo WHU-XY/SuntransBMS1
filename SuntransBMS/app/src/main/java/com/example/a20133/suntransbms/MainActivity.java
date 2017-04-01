@@ -287,7 +287,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
         }
         dialog =  new LoadingDialog(MainActivity.this);
-        dialog.loadDialog();
+        dialog.loadDialog("正在刷新");
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override

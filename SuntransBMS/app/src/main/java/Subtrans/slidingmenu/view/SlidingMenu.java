@@ -77,7 +77,7 @@ public class SlidingMenu extends HorizontalScrollView {
             case MotionEvent.ACTION_MOVE:
                 pulldownY=ev.getX();
                 int scrollX = (int) Math.abs(pulldownY-lastdownY);
-                if(scrollX>mMenuWidth/2){
+                if(scrollX>mMenuWidth/4){
                      return   true;
                 } else return false;
         }

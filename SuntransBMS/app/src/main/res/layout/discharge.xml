@@ -87,7 +87,7 @@
 
                 >
                 <ImageView
-                    android:id="@+id/id_discharge_ImgV21"
+                    android:id="@+id/id_discharge_ImgV12"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
@@ -98,7 +98,7 @@
                     android:id="@+id/id_discharge_TV21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/id_discharge_ImgV21"
+                    android:layout_toRightOf="@id/id_discharge_ImgV12"
                     android:text="放电-电池#2"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
@@ -136,7 +136,7 @@
 
                 >
                 <ImageView
-                    android:id="@+id/id_discharge_ImgV31"
+                    android:id="@+id/id_discharge_ImgV13"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
@@ -147,7 +147,7 @@
                     android:id="@+id/id_discharge_TV31"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/id_discharge_ImgV31"
+                    android:layout_toRightOf="@id/id_discharge_ImgV13"
                     android:text="放电-电池#3"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
@@ -185,7 +185,7 @@
 
                 >
                 <ImageView
-                    android:id="@+id/id_discharge_ImgV41"
+                    android:id="@+id/id_discharge_ImgV14"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
@@ -196,7 +196,7 @@
                     android:id="@+id/id_discharge_TV41"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/id_discharge_ImgV41"
+                    android:layout_toRightOf="@id/id_discharge_ImgV14"
                     android:text="放电-电池#4"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
@@ -247,7 +247,7 @@
                 android:layout_height="wrap_content"
                 >
                 <ImageView
-                    android:id="@+id/id_discharge_ImgV22"
+                    android:id="@+id/id_discharge_ImgV21"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
@@ -257,7 +257,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/id_discharge_ImgV22"
+                    android:layout_toRightOf="@id/id_discharge_ImgV21"
                     android:text="输出电压"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
@@ -282,7 +282,7 @@
                 android:layout_height="wrap_content"
                 >
                 <ImageView
-                    android:id="@+id/id_discharge_ImgV25"
+                    android:id="@+id/id_discharge_ImgV22"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
@@ -292,7 +292,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/id_discharge_ImgV25"
+                    android:layout_toRightOf="@id/id_discharge_ImgV22"
                     android:text="放电容量"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
@@ -308,7 +308,7 @@
                 android:layout_height="wrap_content"
                 >
                 <ImageView
-                    android:id="@+id/id_discharge_ImgV24"
+                    android:id="@+id/id_discharge_ImgV23"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
@@ -318,7 +318,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/id_discharge_ImgV24"
+                    android:layout_toRightOf="@id/id_discharge_ImgV23"
                     android:text="实际放电周期"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
@@ -336,7 +336,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="曲线"
+                    android:text="编号"
                     android:layout_marginLeft="20dp"
                     />
 
@@ -346,54 +346,30 @@
                 android:layout_height="wrap_content"
 
                 >
+                <ImageView
+                    android:id="@+id/id_discharge_ImgV31"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/time"
+                    android:layout_centerVertical="true"
+
+                    />
                 <TextView
-                    android:id="@+id/id_discharge_TV12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Vdc"
+                    android:layout_toRightOf="@id/id_discharge_ImgV31"
+                    android:text="放电电池编号"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
                     android:layout_centerVertical="true"
-                    />
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/id_discharge_voltage_Btn12"
-                    android:layout_toRightOf="@id/id_discharge_TV12"
-                    android:text="电压"
-                    android:textColor="#ffffff"
-                    android:background="#ff7bdfc2"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    />
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/id_discharge_current_Btn12"
-                    android:layout_toRightOf="@id/id_discharge_voltage_Btn12"
-                    android:text="电流"
-                    android:textColor="#ffffff"
-                    android:background="#ff7bdfc2"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    />
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/id_discharge_volume_Btn12"
-                    android:layout_toRightOf="@id/id_discharge_current_Btn12"
-                    android:text="容量"
-                    android:textColor="#ffffff"
-                    android:background="#ff7bdfc2"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
                     />
 
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="200dp"
+                android:layout_height="30dp"
                 android:background="#ffffffff"
                 >
 

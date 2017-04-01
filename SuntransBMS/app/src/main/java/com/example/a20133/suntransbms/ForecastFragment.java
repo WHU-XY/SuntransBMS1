@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 
@@ -16,8 +17,9 @@ import android.widget.ImageButton;
  */
 
 public class ForecastFragment extends Fragment  {
-    private LoadingDialog dialog;
+//    private LoadingDialog dialog;
     private ImageButton imageButton;
+//    private Button button;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class ForecastFragment extends Fragment  {
         },1000);*/
         return view;
     }
+
 
 
     private class MyListener implements PullToRefreshLayout.OnRefreshListener {

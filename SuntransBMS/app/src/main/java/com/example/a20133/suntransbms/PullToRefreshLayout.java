@@ -63,9 +63,7 @@ public class PullToRefreshLayout extends RelativeLayout {
     private boolean canPullDown = true;
     private boolean canPullUp = true;
     private Context mContext;
-    private ImageButton queryButton;
     private View viewtop;
-    private LoadingDialog dialog;
 
 
 
@@ -310,7 +308,7 @@ public class PullToRefreshLayout extends RelativeLayout {
                             || (((Pullable) pullableView).canPullDown()
                             && canPullDown && state != LOADING))
                     {
-                        pullDownY = pullDownY + (ev.getY() - lastY)/(radio+2);//qudiaoradio
+                        pullDownY = pullDownY + (ev.getY() - lastY)/(radio);//qudiaoradio
                         if (pullDownY < 0)
                         {
                             pullDownY = 0;
@@ -326,7 +324,7 @@ public class PullToRefreshLayout extends RelativeLayout {
                     } else if (pullUpY < 0
                             || (((Pullable) pullableView).canPullUp() && canPullUp && state != REFRESHING))
                     {
-                        pullUpY = pullUpY + (ev.getY() - lastY) / radio;
+                        pullUpY = pullUpY + (ev.getY() - lastY);
                         if (pullUpY > 0)
                         {
                             pullUpY = 0;
@@ -472,7 +470,6 @@ public class PullToRefreshLayout extends RelativeLayout {
                 .findViewById(R.id.loadstate_tv);
         loadingView = loadmoreView.findViewById(R.id.loading_icon);
         loadStateImageView = loadmoreView.findViewById(R.id.loadstate_iv);
-        queryButton = (ImageButton) viewtop.findViewById(R.id.query_btn);
 
     }
 
